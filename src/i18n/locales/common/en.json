@@ -1,0 +1,11 @@
+{
+  "appName": "Sons of Olympus RPG",
+  "home": "Home",
+  "about": "About",
+  "welcome": "Welcome to Sons of Olympus",
+  "aboutText": "This is a demo page to showcase routing, theming, and i18n.",
+  "darkMode": "Dark mode",
+  "lightMode": "Light mode",
+  "language": "Language",
+  "character": "character"
+}

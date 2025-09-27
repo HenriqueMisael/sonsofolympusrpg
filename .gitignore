@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output
+/dist/
+/dist-ssr/
+/.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+vite-error.log*
+
+# Testing
+/coverage/
+/.vitest/
+
+# Editor/IDE
+/.vscode/
+/.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# TypeScript
+*.tsbuildinfo
+
+# ESLint cache
+.eslintcache
+
+# Local overrides
+*.local

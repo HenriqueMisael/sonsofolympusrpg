@@ -1,0 +1,11 @@
+{
+  "appName": "Hijos de Olimpo RPG",
+  "home": "Inicio",
+  "about": "Acerca de",
+  "welcome": "Bienvenido a Hijos de Olimpo",
+  "aboutText": "Esta es una página de demostración para mostrar routing, temas e i18n.",
+  "darkMode": "Modo oscuro",
+  "lightMode": "Modo claro",
+  "language": "Idioma",
+  "character": "personaje"
+}
