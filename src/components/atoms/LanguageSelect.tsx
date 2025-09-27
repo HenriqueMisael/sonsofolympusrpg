@@ -1,4 +1,4 @@
-import {ButtonBase, ToggleButton, ToggleButtonGroup, Tooltip} from '@mui/material'
+import {ToggleButton, ToggleButtonGroup, Tooltip} from '@mui/material'
 import {useTranslation} from 'react-i18next'
 
 export default function LanguageSelect() {
@@ -8,53 +8,52 @@ export default function LanguageSelect() {
 
   return (
     <Tooltip title={t('language')}>
-      <ButtonBase
-        onClick={() => i18n.changeLanguage(current === 'en' ? 'pt-BR' : 'en')}
+      <ToggleButtonGroup
+        size="small"
+        value={current}
+        exclusive
+        onChange={(_, val) => {
+          if (val) i18n.changeLanguage(val)
+        }}
         aria-label={t('language')}
-        sx={{ml: 1, borderRadius: 1, display: 'inline-block'}}
+        sx={{
+          ml: 1,
+          '& .MuiToggleButton-root': {
+            minWidth: '3em',
+          },
+        }}
       >
-        <ToggleButtonGroup
-          size="small"
-          value={current}
-          exclusive
-          sx={{
-            '& .MuiToggleButton-root': {
-              minWidth: '3em',
-            },
-          }}
-        >
-          <ToggleButton value="en" aria-label="English">
-            <span
-              role="img"
-              aria-hidden
-              style={{
-                display: 'inline-block',
-                fontSize: '1.25em',
-                transform: 'scale(1.6)',
-                transformOrigin: 'center',
-                lineHeight: 1
-              }}
-            >
-              🇺🇸
-            </span>
-          </ToggleButton>
-          <ToggleButton value="pt-BR" aria-label="Português (Brasil)">
-            <span
-              role="img"
-              aria-hidden
-              style={{
-                display: 'inline-block',
-                fontSize: '1.25em',
-                transform: 'scale(1.6)',
-                transformOrigin: 'center',
-                lineHeight: 1
-              }}
-            >
-              🇧🇷
-            </span>
-          </ToggleButton>
-        </ToggleButtonGroup>
-      </ButtonBase>
+        <ToggleButton value="en" aria-label="English">
+          <span
+            role="img"
+            aria-hidden
+            style={{
+              display: 'inline-block',
+              fontSize: '1.25em',
+              transform: 'scale(1.6)',
+              transformOrigin: 'center',
+              lineHeight: 1
+            }}
+          >
+            🇺🇸
+          </span>
+        </ToggleButton>
+        <ToggleButton value="pt-BR" aria-label="Português (Brasil)">
+          <span
+            role="img"
+            aria-hidden
+            style={{
+              display: 'inline-block',
+              fontSize: '1.25em',
+              transform: 'scale(1.6)',
+              transformOrigin: 'center',
+              lineHeight: 1
+            }}
+          >
+            🇧🇷
+          </span>
+        </ToggleButton>
+      </ToggleButtonGroup>
     </Tooltip>
   )
 }

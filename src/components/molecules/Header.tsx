@@ -31,6 +31,14 @@ export default function Header() {
           >
             {t('about')}
           </Button>
+          <Button
+            color="inherit"
+            component={RouterLink}
+            to="/character"
+            variant={pathname === '/character' ? 'outlined' : 'text'}
+          >
+            Character
+          </Button>
           <LanguageSelect/>
           <ThemeToggle/>
         </Box>
